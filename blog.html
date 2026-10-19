@@ -1,0 +1,390 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Blog & Articles | Ashraya Welfare and Educational Society</title>
+
+<meta name="description" content="Read articles on mental health awareness, drug addiction prevention, youth development and family welfare from Ashraya Welfare and Educational Society.">
+
+<style>
+:root {
+  --navy: #12304a;
+  --teal: #087f8c;
+  --gold: #f0b84b;
+  --light: #f3f8fb;
+  --white: #ffffff;
+  --text: #243746;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--light);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 18px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand img {
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
+  background: white;
+  border-radius: 50%;
+}
+
+.brand h2 {
+  margin: 0;
+  font-size: 19px;
+  line-height: 1.4;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: var(--gold);
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 25px;
+  padding: 10px 16px;
+  font-weight: bold;
+}
+
+.language-btn {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+.hero {
+  background: linear-gradient(135deg, #12304a, #087f8c);
+  color: white;
+  padding: 65px 7%;
+  text-align: center;
+}
+
+.hero h1 {
+  margin: 0 0 12px;
+  font-size: clamp(30px, 5vw, 46px);
+}
+
+.hero p {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 18px;
+}
+
+main {
+  max-width: 1150px;
+  margin: auto;
+  padding: 38px 20px 60px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.section-title h2 {
+  color: var(--navy);
+  margin-bottom: 5px;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 22px;
+}
+
+.blog-card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 5px 20px rgba(18, 48, 74, 0.08);
+  border-top: 4px solid var(--teal);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.blog-icon {
+  font-size: 38px;
+}
+
+.blog-card h3 {
+  color: var(--navy);
+  margin: 12px 0 8px;
+  line-height: 1.4;
+}
+
+.blog-card p {
+  margin-top: 0;
+}
+
+.read-more {
+  display: inline-block;
+  background: var(--teal);
+  color: white;
+  text-decoration: none;
+  padding: 10px 17px;
+  border-radius: 25px;
+  font-weight: bold;
+  margin-top: auto;
+}
+
+.read-more:hover {
+  background: var(--navy);
+}
+
+.note {
+  margin-top: 35px;
+  padding: 20px;
+  border-left: 5px solid var(--gold);
+  background: white;
+  border-radius: 8px;
+}
+
+footer {
+  background: var(--navy);
+  color: white;
+  text-align: center;
+  padding: 28px 18px;
+}
+
+footer a {
+  color: var(--gold);
+}
+
+@media (max-width: 600px) {
+  header {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .brand {
+    flex-direction: column;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  .hero {
+    padding: 45px 20px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="brand">
+    <img src="ashrayalogo.jpg" alt="Ashraya Society Logo">
+    <h2 data-en="Ashraya Welfare and Educational Society"
+        data-te="ఆశ్రయ వెల్ఫేర్ అండ్ ఎడ్యుకేషనల్ సొసైటీ">
+      Ashraya Welfare and Educational Society
+    </h2>
+  </div>
+
+  <nav>
+    <a href="index.html" data-en="Home" data-te="హోమ్">Home</a>
+    <a href="mental-health-awareness.html"
+       data-en="Mental Health" data-te="మానసిక ఆరోగ్యం">Mental Health</a>
+    <a href="drug-addiction-prevention.html"
+       data-en="Drug Prevention" data-te="మత్తు పదార్థాల నివారణ">Drug Prevention</a>
+    <button class="language-btn" onclick="toggleLanguage()" id="languageButton">
+      తెలుగు
+    </button>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1 data-en="Ashraya Blog & Articles"
+      data-te="ఆశ్రయ బ్లాగ్ మరియు వ్యాసాలు">
+    Ashraya Blog & Articles
+  </h1>
+
+  <p data-en="Knowledge, awareness and inspiration for healthier families and stronger communities."
+     data-te="ఆరోగ్యకరమైన కుటుంబాలు, బలమైన సమాజం కోసం జ్ఞానం, అవగాహన మరియు స్ఫూర్తి.">
+    Knowledge, awareness and inspiration for healthier families and stronger communities.
+  </p>
+</section>
+
+<main>
+  <div class="section-title">
+    <h2 data-en="Explore Our Articles" data-te="మా వ్యాసాలను చదవండి">
+      Explore Our Articles
+    </h2>
+    <p data-en="Learn, understand and share awareness."
+       data-te="నేర్చుకోండి, అర్థం చేసుకోండి, అవగాహనను పంచుకోండి.">
+      Learn, understand and share awareness.
+    </p>
+  </div>
+
+  <div class="blog-grid">
+
+    <article class="blog-card">
+      <div class="blog-icon">🧠</div>
+      <h3 data-en="Why Mental Health Awareness Matters"
+          data-te="మానసిక ఆరోగ్య అవగాహన ఎందుకు అవసరం?">
+        Why Mental Health Awareness Matters
+      </h3>
+      <p data-en="Understand emotional well-being, recognize when support may be needed, and help reduce stigma around mental health."
+         data-te="భావోద్వేగ ఆరోగ్యాన్ని అర్థం చేసుకోవడం, అవసరమైనప్పుడు సహాయం పొందడం, మానసిక ఆరోగ్యంపై అపోహలను తగ్గించడం గురించి తెలుసుకోండి.">
+        Understand emotional well-being, recognize when support may be needed, and help reduce stigma around mental health.
+      </p>
+      <a class="read-more" href="mental-health-awareness.html"
+         data-en="Read More" data-te="మరింత చదవండి">Read More</a>
+    </article>
+
+    <article class="blog-card">
+      <div class="blog-icon">🚫</div>
+      <h3 data-en="Drug Addiction Prevention"
+          data-te="మత్తు పదార్థాల వ్యసన నివారణ">
+        Drug Addiction Prevention
+      </h3>
+      <p data-en="Learn about prevention, early support, family involvement and compassionate pathways to recovery."
+         data-te="వ్యసన నివారణ, ముందస్తు సహాయం, కుటుంబ సహకారం మరియు కోలుకోవడానికి అవసరమైన మద్దతు గురించి తెలుసుకోండి.">
+        Learn about prevention, early support, family involvement and compassionate pathways to recovery.
+      </p>
+      <a class="read-more" href="drug-addiction-prevention.html"
+         data-en="Read More" data-te="మరింత చదవండి">Read More</a>
+    </article>
+
+    <article class="blog-card">
+      <div class="blog-icon">👨‍👩‍👧</div>
+      <h3 data-en="Family Relationships and Children's Mental Health"
+          data-te="కుటుంబ సంబంధాలు మరియు పిల్లల మానసిక ఆరోగ్యం">
+        Family Relationships and Children's Mental Health
+      </h3>
+      <p data-en="Discover how supportive communication, stability and understanding can help children feel safe and valued."
+         data-te="ప్రేమతో కూడిన సంభాషణ, స్థిరమైన కుటుంబ వాతావరణం, పరస్పర అవగాహన పిల్లలకు భద్రతా భావాన్ని ఎలా కలిగిస్తాయో తెలుసుకోండి.">
+        Discover how supportive communication, stability and understanding can help children feel safe and valued.
+      </p>
+      <a class="read-more" href="mailto:Ashrayawelfaresociety227@gmail.com?subject=Family%20Wellbeing%20Article"
+         data-en="Request Article" data-te="వ్యాసం కోసం సంప్రదించండి">Request Article</a>
+    </article>
+
+    <article class="blog-card">
+      <div class="blog-icon">🎓</div>
+      <h3 data-en="Youth Development and Life Skills"
+          data-te="యువత అభివృద్ధి మరియు జీవన నైపుణ్యాలు">
+        Youth Development and Life Skills
+      </h3>
+      <p data-en="Explore healthy decision-making, confidence, positive habits and constructive ways to handle peer pressure."
+         data-te="సరైన నిర్ణయాలు తీసుకోవడం, ఆత్మవిశ్వాసం, మంచి అలవాట్లు, స్నేహితుల ఒత్తిడిని ఎదుర్కొనే మార్గాల గురించి తెలుసుకోండి.">
+        Explore healthy decision-making, confidence, positive habits and constructive ways to handle peer pressure.
+      </p>
+      <a class="read-more" href="mailto:Ashrayawelfaresociety227@gmail.com?subject=Youth%20Development%20Article"
+         data-en="Request Article" data-te="వ్యాసం కోసం సంప్రదించండి">Request Article</a>
+    </article>
+
+    <article class="blog-card">
+      <div class="blog-icon">⛏️</div>
+      <h3 data-en="Well-being of Singareni Workers' Families"
+          data-te="సింగరేణి కార్మికుల కుటుంబాల సంక్షేమం">
+        Well-being of Singareni Workers' Families
+      </h3>
+      <p data-en="Explore the importance of family support, emotional well-being and community awareness for workers' households."
+         data-te="కార్మికుల కుటుంబాల్లో పరస్పర సహకారం, భావోద్వేగ ఆరోగ్యం, సామాజిక అవగాహన ప్రాముఖ్యతను తెలుసుకోండి.">
+        Explore the importance of family support, emotional well-being and community awareness for workers' households.
+      </p>
+      <a class="read-more" href="mailto:Ashrayawelfaresociety227@gmail.com?subject=Singareni%20Families%20Article"
+         data-en="Request Article" data-te="వ్యాసం కోసం సంప్రదించండి">Request Article</a>
+    </article>
+
+    <article class="blog-card">
+      <div class="blog-icon">🌱</div>
+      <h3 data-en="Positive Thinking and Healthy Living"
+          data-te="సానుకూల ఆలోచనలు మరియు ఆరోగ్యకరమైన జీవనం">
+        Positive Thinking and Healthy Living
+      </h3>
+      <p data-en="Explore practical ways to build healthy routines, manage everyday stress and develop a balanced outlook."
+         data-te="మంచి దినచర్యలు అలవర్చుకోవడం, రోజువారీ ఒత్తిడిని నిర్వహించడం, సమతుల్య దృక్పథాన్ని పెంపొందించుకోవడం గురించి తెలుసుకోండి.">
+        Explore practical ways to build healthy routines, manage everyday stress and develop a balanced outlook.
+      </p>
+      <a class="read-more" href="mailto:Ashrayawelfaresociety227@gmail.com?subject=Positive%20Thinking%20Article"
+         data-en="Request Article" data-te="వ్యాసం కోసం సంప్రదించండి">Request Article</a>
+    </article>
+
+  </div>
+
+  <div class="note">
+    <strong data-en="A message from Ashraya"
+            data-te="ఆశ్రయ సందేశం">A message from Ashraya</strong>
+    <p data-en="Awareness, compassion and timely support can help individuals, families and communities move toward healthier lives."
+       data-te="అవగాహన, దయ, సరైన సమయంలో అందించే సహాయం వ్యక్తులు, కుటుంబాలు మరియు సమాజం ఆరోగ్యకరమైన జీవితాల వైపు సాగడానికి తోడ్పడతాయి.">
+      Awareness, compassion and timely support can help individuals, families and communities move toward healthier lives.
+    </p>
+  </div>
+</main>
+
+<footer>
+  <p><strong>Ash्रaya Welfare and Educational Society</strong></p>
+  <p>Mancherial District, Telangana, India</p>
+  <p>
+    <a href="mailto:Ashrayawelfaresociety227@gmail.com">
+      Ashrayawelfaresociety227@gmail.com
+    </a>
+  </p>
+  <p>© <span id="year"></span> Ashraya Welfare and Educational Society</p>
+</footer>
+
+<script>
+let currentLanguage = "en";
+
+function toggleLanguage() {
+  currentLanguage = currentLanguage === "en" ? "te" : "en";
+
+  document.querySelectorAll("[data-en][data-te]").forEach(function(element) {
+    element.textContent = element.getAttribute("data-" + currentLanguage);
+  });
+
+  document.documentElement.lang = currentLanguage;
+  document.getElementById("languageButton").textContent =
+    currentLanguage === "en" ? "తెలుగు" : "English";
+}
+
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
+```
