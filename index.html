@@ -325,6 +325,70 @@ footer a { color: white; }
   nav { gap: 12px; }
   .hero { padding-top: 48px; padding-bottom: 48px; }
 }
+/* Mission, Vision and Leadership */
+.purpose-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 25px;
+}
+.purpose-card {
+  padding: 26px;
+  background: #fff;
+  border: 1px solid #dce8e8;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px #12304a08;
+}
+.purpose-card h3 { color: var(--navy); margin-top: 0; }
+.purpose-card p { color: var(--muted); }
+
+.leadership-section {
+  padding: 70px 5%;
+  background: #f6faf9;
+}
+.leadership-wrap { max-width: 1180px; margin: auto; }
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  max-width: 900px;
+  margin: auto;
+}
+.leader-card {
+  overflow: hidden;
+  background: white;
+  border: 1px solid #dce8e8;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px #12304a12;
+  text-align: center;
+}
+.leader-card img {
+  display: block;
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  object-position: center 24%;
+}
+.leader-info { padding: 22px 18px 26px; }
+.leader-role {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: var(--teal);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.leader-info h3 { color: var(--navy); font-size: 23px; }
+.leader-info p { color: var(--muted); }
+.leader-info .leader-profession { color: var(--teal); font-weight: 700; }
+
+@media (max-width: 900px) {
+  .purpose-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .leadership-grid { grid-template-columns: 1fr; }
+  .leader-card img { height: 350px; }
+}
 </style>
 </head>
 
@@ -516,6 +580,7 @@ footer a { color: white; }
 </section>
 
 
+<!-- ABOUT SECTION -->
 <section class="content" id="about">
   <div class="container about-grid">
     <div>
@@ -545,7 +610,45 @@ footer a { color: white; }
     </div>
   </div>
 </section>
-html
+<!-- OUR MISSION AND VISION -->
+<section class="content soft" id="mission-vision">
+  <div class="container">
+
+    <div class="section-head">
+      <div class="eyebrow" style="color:var(--teal)">
+        OUR PURPOSE
+      </div>
+      <h2>Our Mission &amp; Vision</h2>
+    </div>
+
+    <div class="purpose-grid">
+
+      <article class="purpose-card">
+        <h3>Our Mission</h3>
+        <p>
+          To strengthen individuals, families and communities
+          through education, mental health awareness, prevention
+          initiatives and compassionate community support.
+        </p>
+      </article>
+
+      <article class="purpose-card">
+        <h3>Our Vision</h3>
+        <p>
+          To build an educated, healthy, inclusive and self-reliant
+          society where every person is treated with dignity and
+          has opportunities to grow.
+        </p>
+      </article>
+
+    </div>
+
+    <p style="text-align:center;color:var(--teal);font-weight:bold;margin-top:28px;">
+      Empowering People • Educating Communities • Transforming Lives
+    </p>
+
+  </div>
+</section>
 <div style="text-align:center; margin:25px auto;">
   <img src="IMG_20231228_142415.jpg"
        alt="Ashraya Welfare and Educational Society"
@@ -580,7 +683,45 @@ html
 
   </div>
 </section>
+<!-- OUR LEADERSHIP -->
+<section class="leadership-section" id="leadership">
+  <div class="leadership-wrap">
 
+    <div class="section-head">
+      <div class="eyebrow" style="color:var(--teal)">
+        THE PEOPLE BEHIND OUR WORK
+      </div>
+      <h2>Our Leadership</h2>
+      <p>Committed to service, education and stronger communities.</p>
+    </div>
+
+    <div class="leadership-grid">
+
+      <article class="leader-card">
+        <img src="images/founder-chairman.jpg"
+             alt="Ambala Sammaiah">
+        <div class="leader-info">
+          <span class="leader-role">Founder &amp; Chairman</span>
+          <h3>Ambala Sammaiah</h3>
+          <p>M.Sc (Psy), PGDGC, DFMC</p>
+          <p class="leader-profession">Counseling Psychologist</p>
+        </div>
+      </article>
+
+      <article class="leader-card">
+        <img src="images/founder-secretary.jpg"
+             alt="Gunti Ravi Kumar">
+        <div class="leader-info">
+          <span class="leader-role">Founder &amp; Secretary</span>
+          <h3>Gunti Ravi Kumar</h3>
+          <p>M.Sc (Psy), PGDGC, MBA</p>
+          <p class="leader-profession">Counseling Psychologist</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
 <section class="content soft" id="programs">
   <div class="container">
     <div class="section-head">
