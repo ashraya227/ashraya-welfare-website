@@ -342,18 +342,26 @@ footer a { color: white; }
 .purpose-card h3 { color: var(--navy); margin-top: 0; }
 .purpose-card p { color: var(--muted); }
 
+/* Leadership Section */
 .leadership-section {
   padding: 70px 5%;
   background: #f6faf9;
 }
-.leadership-wrap { max-width: 1180px; margin: auto; }
-.leadership-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 28px;
-  max-width: 900px;
+
+.leadership-wrap {
+  max-width: 1180px;
   margin: auto;
 }
+
+.leadership-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Founder Profile */
 .leader-card {
   overflow: hidden;
   background: white;
@@ -362,6 +370,14 @@ footer a { color: white; }
   box-shadow: 0 8px 25px #12304a12;
   text-align: center;
 }
+
+.leader-card:first-child {
+  display: grid;
+  grid-template-columns: 0.85fr 1.4fr;
+  text-align: left;
+  align-items: center;
+}
+
 .leader-card img {
   display: block;
   width: 100%;
@@ -369,7 +385,15 @@ footer a { color: white; }
   object-fit: cover;
   object-position: center 24%;
 }
-.leader-info { padding: 22px 18px 26px; }
+
+.leader-card:first-child img {
+  height: 430px;
+}
+
+.leader-info {
+  padding: 30px;
+}
+
 .leader-role {
   display: inline-block;
   margin-bottom: 8px;
@@ -378,12 +402,44 @@ footer a { color: white; }
   font-weight: 700;
   text-transform: uppercase;
 }
-.leader-info h3 { color: var(--navy); font-size: 23px; }
-.leader-info p { color: var(--muted); }
-.leader-info .leader-profession { color: var(--teal); font-weight: 700; }
 
-@media (max-width: 900px) {
-  .purpose-grid { grid-template-columns: 1fr; }
+.leader-info h3 {
+  color: var(--navy);
+  font-size: 25px;
+}
+
+.leader-info p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.leader-info .leader-profession {
+  color: var(--teal);
+  font-weight: 700;
+}
+
+/* Secretary Profile */
+.leader-card:last-child {
+  max-width: 420px;
+  width: 100%;
+  margin: auto;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .leader-card:first-child {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .leader-card:first-child img {
+    height: 350px;
+  }
+
+  .leader-info {
+    padding: 22px;
+  }
+}
 }
 @media (max-width: 600px) {
   .leadership-grid { grid-template-columns: 1fr; }
@@ -698,15 +754,43 @@ footer a { color: white; }
     <div class="leadership-grid">
 
       <article class="leader-card">
-       <img src="images/images/founder-chairman.jpg"
-             alt="Ambala Sammaiah">
-        <div class="leader-info">
-          <span class="leader-role">Founder &amp; Chairman</span>
-          <h3>Ambala Sammaiah</h3>
-          <p>M.Sc (Psy), PGDGC, DFMC</p>
-          <p class="leader-profession">Counseling Psychologist</p>
-        </div>
-      </article>
+  <img src="images/images/founder-chairman.jpg" alt="Ambala Sammaiah">
+
+  <div class="leader-info">
+    <span class="leader-role">Founder &amp; Chairman</span>
+
+    <h3>Ambala Sammaiah</h3>
+
+    <p><strong>M.Sc (Psy), PGDGC, DFMC</strong></p>
+
+    <p class="leader-profession">
+      Counseling Psychologist | Author | Social Entrepreneur
+    </p>
+
+    <p>
+      Ambala Sammaiah is the Founder and Chairman of Ashraya Welfare
+      and Educational Society. He is committed to promoting education,
+      child welfare, mental health awareness and community development.
+    </p>
+
+    <p>
+      His vision is to build an educated, healthy, empowered and
+      compassionate society where every child receives education
+      and every individual lives with dignity.
+    </p>
+
+    <p>
+      Through Ashraya Welfare and Educational Society, he aims to
+      encourage child protection, educational development, women's
+      empowerment and humanitarian service.
+    </p>
+
+    <p><strong>
+      Every Child Deserves Education. Every Mind Deserves Care.
+      Every Human Being Deserves Dignity.
+    </strong></p>
+  </div>
+</article>
 
       <article class="leader-card">
        <img src="images/images/founder-secretary.jpg"
